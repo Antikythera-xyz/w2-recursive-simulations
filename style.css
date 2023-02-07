@@ -1,0 +1,52 @@
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminPro-Bold.ttf);
+}
+
+html,body {
+    font-family: AcuminPro;
+    color: #222;
+    font-size: 24px;
+}
+.container {
+    overflow: hidden;
+    margin-top: 2px;
+  }
+  
+  .filterDiv {
+    border: 1px solid #000;
+    padding: 12px 16px;
+    float: left;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    margin: 4px;
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: 1px solid #000;
+    padding: 12px 16px;
+    background-color: #a9ff47;
+    cursor: pointer;
+    font-family: AcuminPro;
+    color: #222;
+    font-size: 24px;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn:active {
+    background-color: #666;
+    color: white;
+  }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Control buttons -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('moc')">Models of Cognition</button>
+            <button class="btn" onclick="filterSelection('hs')">Hyperstition</button>
+            <button class="btn" onclick="filterSelection('pm')">Phantomatics</button>
+            <button class="btn" onclick="filterSelection('ssherman')">Stephanie Sherman</button>
+            <button class="btn" onclick="filterSelection('nkhayles')">N Katherine Hayles</button>
+            <button class="btn" onclick="filterSelection('bkonior')">Bogna Konior</button>
+        </div>
+
+        <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+        <div class="container">
+            <div class="filterDiv moc">Models of Cognition</div>
+            <div class="filterDiv hs">Hyperstition</div>
+            <div class="filterDiv pm">Phantomatics</div>
+            <div class="filterDiv ssherman">Stephanie Sherman</div>
+            <div class="filterDiv nkhayles">N Katherine Hayles</div>
+            <div class="filterDiv bkonior">Bogna Konior</div>
+            <div class="filterDiv moc"><p>Your model of the world: Ways we think things work</p></div>
+            <div class="filterDiv hs"><p>Specifically modeling the future</p></div>
+            <div class="filterDiv hs"><p>synthesis of many futures</p></div>
+            <div class="filterDiv hs ssherman"><p>Marketing and embedding the urban imaginary</p></div>
+            <div class="filterDiv hs ssherman"><p>every day life with vehicles</p></div>
+            <div class="filterDiv moc nkhayles"><p>umwelt of xenobots, multicellular organisms</p></div>
+            <div class="filterDiv ssherman"><img src="img/ss_ford_assembly_line.webp" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>
