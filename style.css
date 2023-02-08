@@ -1,6 +1,19 @@
 @font-face {
     font-family: AcuminPro;
     src: url(fonts/AcuminPro-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminPro-Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminPro-Regular.ttf);
+    font-weight: normal;
 }
 
 html,body {
@@ -25,7 +38,7 @@ html,body {
 .title {
   font-family: AcuminPro;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: bold;
   margin: 10px;
   z-index: 52;
   justify-content: center;
@@ -33,7 +46,6 @@ html,body {
 }
 
 #myBtnContainer {
-  overflow: hidden;
   position: fixed;
   margin-top: 65px;
   z-index: 49;
@@ -46,16 +58,13 @@ html,body {
 .filterDiv {
   border: 1px solid #000;
   padding: 12px 16px;
-  float: left;
-  width: auto;
-  height: 100%;
   text-align: center;
   display: none; /* Hidden by default */
 }
 
 /* The "show" class is added to the filtered elements */
 .show {
-  display: block;
+  display: inline-block;
 }
 
 /* Style the buttons */
@@ -67,6 +76,7 @@ html,body {
   cursor: pointer;
   font-family: AcuminPro;
   color: #222;
+  font-weight: bold;
   font-size: 14px;
   z-index: 49;
 }
@@ -84,17 +94,53 @@ html,body {
 
 #allCategories {
   position: relative;
-  padding-top: 170px;
+  margin-top: 160px;
+  width: 100%;
 }
 
 .category {
-  overflow: hidden;
   position: relative;
-  margin-top: 10px;
+  height: 500px;
+  width: 100%;
   margin-left: 4px;
   margin-right: 4px;
 }
 
+.categoryTitle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 160px;
+  left: 4px;
+  font-weight: bold;
+  margin-left: 8px;
+  text-decoration: underline;
+  z-index: 40;
+}
+
+.categoryDescription {
+  position: relative;
+  height: 100%;
+  width: 350px;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 8px;
+}
+
+.categoryInfo {
+  width: 365px;
+  height: 100%;
+  float: left;
+  border-right: solid;
+}
+
+.tiles {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-left: 5px;
+}
+
 .tile {
-  margin: 4px;
+  margin: 5px;
+  height: 450px;
 }
