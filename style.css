@@ -152,7 +152,8 @@ html,body {
 }
 
 .tileWrap {
-  max-height:  90vh;
+  max-height:  88vh;
+  overflow-y: scroll;
 }
 
 .tiles {
