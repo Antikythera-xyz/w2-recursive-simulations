@@ -35,7 +35,7 @@ html,body {
   background: white;
 }
 
-.title {
+#title {
   font-family: AcuminPro;
   font-size: 50px;
   font-weight: bold;
@@ -43,9 +43,19 @@ html,body {
   z-index: 52;
   justify-content: center;
   min-width: 375px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg)
+  }
 }
 
 #myBtnContainer {
+  display: none;
   position: fixed;
   margin-top: 65px;
   z-index: 49;
@@ -57,9 +67,7 @@ html,body {
 
 .filterDiv {
   border: 1px solid #000;
-  padding: 12px 16px;
-  text-align: center;
-  display: none; /* Hidden by default */
+  padding: 12px 12px;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -93,59 +101,67 @@ html,body {
 }
 
 #allCategories {
+  display: flex;
+  flex-direction: row;
   position: relative;
-  margin-top: 160px;
+  margin-top: 80px;
   width: 100%;
 }
 
 .category {
-  position: relative;
-  height: 450px;
-  width: 100%;
+  overflow: auto;
+  height: 100%;
+  width: 20%;
   margin-left: 4px;
   margin-right: 4px;
 }
 
 .categoryTitle {
-  position: -webkit-sticky;
-  position: sticky;
   top: 160px;
   left: 4px;
+  height: auto;
   font-weight: bold;
-  margin-left: 8px;
+  padding-left: 8px;
   text-decoration: underline;
   z-index: 40;
+  background-color: white;
+  color: blue;
+}
+
+.categoryTitle:hover + .categoryDescription {
+  display: block;
 }
 
 .categoryDescription {
   position: relative;
-  height: 100%;
-  width: 350px;
+  height: auto;
+  width: 95%;
   font-weight: lighter;
-  font-size: 20px;
-  margin: 8px;
+  font-size: 16px;
+  display: none;
+  background-color: #a9ff47;
+  padding: 5px;
 }
 
 .categoryInfo {
-  width: 365px;
-  height: 100%;
-  float: left;
-  border-right: solid;
+  width: inherit;
+  height: 400px;
+  position: fixed;
 }
 
 .tiles {
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-left: 5px;
+  margin-top: 70px;
 }
 
 .tile {
   margin: 5px;
-  height: 400px;
-  width: 400px;
-  flex: 0 0 auto;
+  height: auto;
+  width: 88%;
   text-align: left;
+  font-size: 14px;
 }
 
 .image {
