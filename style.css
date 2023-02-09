@@ -21,6 +21,8 @@ html,body {
     color: #222;
     font-size: 24px;
     margin: 0px;
+    height: 100%; 
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -147,6 +149,10 @@ html,body {
   width: inherit;
   height: 400px;
   position: fixed;
+}
+
+.tileWrap {
+  max-height:  90vh;
 }
 
 .tiles {
