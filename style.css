@@ -45,16 +45,46 @@ html,body {
   z-index: 52;
   justify-content: center;
   min-width: 375px;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-  animation: flip 2s infinite;
-  animation-delay: calc(.2s * var(--i))
+  color: black;
+  /* text-shadow: 2px 2px 4px #000000; */
+  /* animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i)) */
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
 }
-@keyframes flip {
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes depth {
+  0% {
+    text-shadow: 0 0 black;
+  }
+  25% {
+    text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black;
+  }
+  50% {
+    text-shadow: 0 0 black;
+  }
+  75% {
+    text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black,
+      -5px 0 black;
+  }
+  100% {
+    text-shadow: 0 0 black;
+  }
+}
+/* @keyframes flip {
   0%,80% {
     transform: rotateY(360deg)
   }
-}
+} */
 
 #myBtnContainer {
   display: none;
@@ -114,8 +144,7 @@ html,body {
   overflow: auto;
   height: 100%;
   width: 20%;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .categoryTitle {
@@ -124,10 +153,18 @@ html,body {
   height: auto;
   font-weight: bold;
   padding-left: 8px;
-  text-decoration: underline;
+  padding-bottom: 10px;
   z-index: 40;
   background-color: white;
-  color: blue;
+  color: white;
+  text-shadow: 2px 2px 4px blue;
+  border-bottom: solid;
+  border-color: black;
+  text-align: left;
+}
+
+.categoryTitle:hover {
+  font-style: italic;
 }
 
 .categoryTitle:hover + .categoryDescription {
@@ -141,8 +178,12 @@ html,body {
   font-weight: lighter;
   font-size: 16px;
   display: none;
-  background-color: #a9ff47;
+  background-color: blue;
+  color: white;
   padding: 5px;
+  border: solid;
+  border-top: none;
+  border-color: black;
 }
 
 .categoryInfo {
@@ -162,7 +203,7 @@ html,body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
