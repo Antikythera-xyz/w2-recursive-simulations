@@ -100,7 +100,7 @@ html,body {
 
 .category {
   position: relative;
-  height: 500px;
+  height: 450px;
   width: 100%;
   margin-left: 4px;
   margin-right: 4px;
@@ -142,8 +142,19 @@ html,body {
 
 .tile {
   margin: 5px;
-  height: 450px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   flex: 0 0 auto;
   text-align: left;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  justify-content: center;
+  height: auto;
+  max-width: 100%;
 }
