@@ -16,6 +16,51 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminProCond-Regular.ttf);
+    font-weight: normal;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminProCond-Bold.ttf);
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminProWide-Bold.otf);
+    font-weight: bold;
+    font-stretch: expanded;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminProWide-Bold-Italic.otf);
+    font-weight: bold;
+    font-stretch: expanded;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminProWide-Light.otf);
+    font-weight: lighter;
+    font-stretch: expanded;
+}
+
+@font-face {
+    font-family: AcuminPro;
+    src: url(fonts/AcuminProWide-Light-Italic.otf);
+    font-weight: lighter;
+    font-stretch: expanded;
+    font-style: italic;
+}
+
+
 html,body {
     font-family: AcuminPro;
     color: #222;
@@ -37,18 +82,20 @@ html,body {
   background: white;
 }
 
+#backgroundTitle {
+  background-color: white;
+}
+
 #title {
   font-family: AcuminPro;
   font-size: 50px;
   font-weight: bold;
+  font-stretch: expanded;
   margin: 10px;
   z-index: 52;
   justify-content: center;
   min-width: 375px;
   color: black;
-  /* text-shadow: 2px 2px 4px #000000; */
-  /* animation: flip 2s infinite;
-  animation-delay: calc(.2s * var(--i)) */
   animation-name: spin, depth;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -80,11 +127,6 @@ html,body {
     text-shadow: 0 0 black;
   }
 }
-/* @keyframes flip {
-  0%,80% {
-    transform: rotateY(360deg)
-  }
-} */
 
 #myBtnContainer {
   display: none;
@@ -95,11 +137,6 @@ html,body {
   border-bottom: solid;
   padding-left: 8px;
   background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.3));
-}
-
-.filterDiv {
-  border: 1px solid #000;
-  padding: 12px 12px;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -158,17 +195,19 @@ html,body {
   background-color: white;
   color: white;
   text-shadow: 2px 2px 4px blue;
-  border-bottom: solid;
+  border-bottom: 1.5px solid;
   border-color: black;
   text-align: left;
 }
 
 .categoryLede {
   margin-top: 5px;
-  font-style: italic;
   font-size: 14px;
   color: black;
   text-shadow: none;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 .categoryTitle:hover {
@@ -189,7 +228,7 @@ html,body {
   background-color: blue;
   color: white;
   padding: 5px;
-  border: solid;
+  border: 1.5px solid;
   border-top: none;
   border-color: black;
 }
@@ -221,15 +260,30 @@ html,body {
   width: 88%;
   text-align: left;
   font-size: 14px;
+  border: 1px solid #000;
+  padding: 12px 12px;
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: expanded;
+  border: none;
 }
 
 .image {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  border: none;
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
 }
 
 img {
   justify-content: center;
   height: auto;
   max-width: 100%;
+  box-shadow: 4px 4px 6px black;
 }
