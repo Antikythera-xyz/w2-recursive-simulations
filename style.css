@@ -150,7 +150,7 @@ html,body {
 .categoryTitle {
   top: 160px;
   left: 4px;
-  height: auto;
+  height: 65px;
   font-weight: bold;
   padding-left: 8px;
   padding-bottom: 10px;
@@ -161,6 +161,14 @@ html,body {
   border-bottom: solid;
   border-color: black;
   text-align: left;
+}
+
+.categoryLede {
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 14px;
+  color: black;
+  text-shadow: none;
 }
 
 .categoryTitle:hover {
@@ -203,7 +211,7 @@ html,body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 50px;
 }
 
