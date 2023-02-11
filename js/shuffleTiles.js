@@ -17,7 +17,6 @@ function shuffle(items)
 
 function shuffleNodes()
 {
-  console.log("shuffling...")
   for (const cat of cats) {
     var list = document.getElementById(cat);
     var nodes = list.children, i = 0;

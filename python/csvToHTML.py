@@ -11,13 +11,13 @@ types = {
     'img',
 }
 
-categories = {
+categories = [
+    'Hypercasting',
     'Semio-mimetics',
-    'Hypognostic Synthesis',
+    'De-chaos model',
     'Phantomatics',
     'Simutation',
-    'Hypercasting',
-}
+]
 
 person = {
 "Stephanie Sherman":"ssherman",
@@ -78,13 +78,13 @@ class Tile:
 def main():
     tilesPerCategory = {
         'Semio-mimetics':[],
-        'Hypognostic Synthesis':[],
+        'De-chaos model':[],
         'Phantomatics':[],
         'Simutation':[],
         'Hypercasting':[],
     }
 
-    with open('copy4.csv', mode='r') as csv_file:
+    with open('copy5.csv', mode='r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         for row in csv_reader:
@@ -96,7 +96,7 @@ def main():
 
     # Ouput tile HTML to file.
     with open('output.html', 'w') as out_file:
-        for category in tilesPerCategory:
+        for category in categories:
             print(category)
             out_file.write(category+'\n')
             print(len((tilesPerCategory[category])))
