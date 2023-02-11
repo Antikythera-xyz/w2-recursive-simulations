@@ -128,45 +128,23 @@ html,body {
   }
 }
 
-#myBtnContainer {
-  display: none;
-  position: fixed;
-  margin-top: 65px;
-  z-index: 49;
-  padding-bottom: 8px;
-  border-bottom: solid;
-  padding-left: 8px;
-  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.3));
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: inline-block;
-}
-
-/* Style the buttons */
-.btn {
-  border: 1px solid #000;
-  padding: 8px 10px;
-  margin-top: 5px;
-  background-color: #a9ff47;
-  cursor: pointer;
-  font-family: AcuminPro;
-  color: #222;
+#shuffle {
+  position: absolute;
+  left: 8px;
+  top: 10px;
   font-weight: bold;
-  font-size: 14px;
-  z-index: 49;
+  font-size: 20px;
+  border: 1.5px solid;
+  padding: 8px;
+  background: yellow;
+  z-index: 200;
+  margin-top: 4px;
+  margin-left: 2px;
+  cursor: pointer;
 }
 
-/* Add a light grey background on mouse-over */
-.btn:hover {
-  background-color: #ddd;
-}
-
-/* Add a dark background to the active button */
-.btn:active {
-  background-color: #666;
-  color: white;
+a {
+  cursor: pointer;
 }
 
 #allCategories {
@@ -265,7 +243,7 @@ html,body {
 }
 
 .quote {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   font-stretch: expanded;
   border: none;
@@ -298,7 +276,7 @@ img {
   font-weight: normal;
   text-align: right;
   font-size: 12px;
-  font-stretch: condensed;
+  font-stretch: normal;
 }
 
 .tile:hover:after {
